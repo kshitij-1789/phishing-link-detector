@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 # Replace with your actual VirusTotal API Key
-VT_API_KEY = "04faf1d000ca318c186b7a28d4b2b7540efc18116826dd74578d135b3d078baf"
+VT_API_KEY = os.getenv("VIRUSTOTAL_API_KEY")
 VT_API_URL = "https://www.virustotal.com/api/v3/urls"
 
 def analyze_url_heuristics(url):
